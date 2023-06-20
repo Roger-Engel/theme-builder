@@ -7,23 +7,45 @@
     <title>Document</title>
     <style>
         .footer-container {
-            background: linear-gradient(to right, #3E7CB1, #65C1E4);
+            background: linear-gradient(to right, #054A91, #3E7CB1);
             transition: background 0.3 ease;
             padding: 20px;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            /* Aligns content horizontally in the center */
             align-items: center;
             color: #ffffff;
         }
 
-        .footer-links a {
-            color: #ffffff;
-            text-decoration: none;
-            margin-right: 10px;
+        .footer-links {
+            display: flex;
+        }
+
+        .footer-links>div {
+            margin-right: 20px;
+            /* Adds some spacing between the sections */
+        }
+
+        .footer-links h3 {
+            margin-top: 0;
+            /* Removes the default margin for the heading */
         }
 
         .footer-info {
             font-size: 12px;
+        }
+
+        .over-mij {
+            width: 325px;
+        }
+
+        .widgets {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .footer-widget {
+            padding-right: 20px;
         }
     </style>
 </head>
@@ -37,13 +59,44 @@
 <footer>
     <div class="footer-container">
         <div class="footer-links">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
-        </div>
-        <div class="footer-info">
-            <p>&copy; <?php echo date("Y"); ?> Your Website Name. All rights reserved.</p>
+            <div class="about-me">
+                <!-- Add your about me content here -->
+                <h3>Over mij</h3>
+                <div class="over-mij">
+                    <p>Ik ben Roger Engel en dit is mijn zelfgemaakte theme voor een wordpress website.</p>
+                    <div class="widgets">
+                        <div class="footer-widget">
+                            <a href="" target="_blank">
+                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/instagram.png" width="fit-content" height="40px">
+                            </a>
+                        </div>
+                        <div class="footer-widget">
+                            <a href="" target="_blank">
+                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/github.png" width="fit-content" height="40px">
+                            </a>
+                        </div>
+                        <div class="footer-widget">
+                            <a href="" target="_blank">
+                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/facebook.png" width="fit-content" height="40px">
+                            </a>
+                        </div>
+                        <div class="footer-widget">
+                            <a href="" target="_blank">
+                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/linkedin.png" width="fit-content" height="40px">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact">
+                <!-- Add your contact information here -->
+                <h3>Contact</h3>
+                <p>Email: EenEmail@gmail.com</p>
+                <p>Telefoon Nummer: 06111111</p>
+                <div class="footer-info">
+                    <p>&copy; <?php echo date("Y"); ?> Droger. All rights reserved.</p>
+                </div>
+            </div>
         </div>
     </div>
 </footer>

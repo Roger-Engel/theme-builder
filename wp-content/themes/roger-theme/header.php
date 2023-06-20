@@ -9,10 +9,11 @@
         body {
             margin: 0;
             padding: 0;
+            font-family: "Bodoni MT", Didot, "Didot LT STD", "Book Antiqua", Garamond, "Times New Roman", serif;
         }
 
         .navbar {
-            background: linear-gradient(to right, #3E7CB1, #65C1E4);
+            background: linear-gradient(to right, #054A91, #3E7CB1);
             transition: background 0.3 ease;
             height: 60px;
             /* Adjust the height as needed */
@@ -42,9 +43,8 @@
         }
 
         .navbar a:hover {
-            background-color: #ffffff;
             /* Hover background color */
-            color: #3E7CB1;
+            color: #054A91;
             /* Hover text color */
         }
     </style>
@@ -56,12 +56,9 @@
 
 </html>
 <nav class="navbar">
-    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/droger.png" width="fit-content" height="50px">
+    <a href="<?php echo esc_url(home_url('/')); ?>">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/droger.png" width="fit-content" height="50px">
+    </a>
 
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
+    <?php wp_nav_menu(array('theme_location' => 'primary', 'container' => 'nav', 'container_class' => 'site-navigation')); ?>
 </nav>
