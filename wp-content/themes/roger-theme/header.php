@@ -7,6 +7,9 @@
     <title>Document</title>
     <style>
         body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
             margin: 0;
             padding: 0;
             font-family: "Bodoni MT", Didot, "Didot LT STD", "Book Antiqua", Garamond, "Times New Roman", serif;
@@ -47,18 +50,43 @@
             color: #054A91;
             /* Hover text color */
         }
+
+        footer {
+            margin-top: auto;
+        }
+
+        /* Add media queries for responsive behavior */
+        @media only screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .navbar ul {
+                flex-direction: column;
+                align-items: center;
+                margin-top: 10px;
+            }
+
+            .navbar li {
+                margin-bottom: 10px;
+            }
+        }
     </style>
 </head>
 
 <body>
-
+    <nav class="navbar">
+        <a href="<?php echo esc_url(home_url('/')); ?>">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/droger.png" width="fit-content" height="50px">
+        </a>
+        <ul>
+            <li><a href="<?php echo esc_url(home_url('/')); ?>">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
 </body>
 
 </html>
-<nav class="navbar">
-    <a href="<?php echo esc_url(home_url('/')); ?>">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/droger.png" width="fit-content" height="50px">
-    </a>
-
-    <?php wp_nav_menu(array('theme_location' => 'primary', 'container' => 'nav', 'container_class' => 'site-navigation')); ?>
-</nav>

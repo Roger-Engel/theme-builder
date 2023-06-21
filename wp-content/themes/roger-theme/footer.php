@@ -19,10 +19,13 @@
 
         .footer-links {
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .footer-links>div {
             margin-right: 20px;
+            margin-bottom: 20px;
             /* Adds some spacing between the sections */
         }
 
@@ -42,10 +45,28 @@
         .widgets {
             display: flex;
             flex-direction: row;
+            justify-content: center;
         }
 
         .footer-widget {
             padding-right: 20px;
+        }
+
+        /* Add a media query for smaller screens */
+        @media only screen and (max-width: 768px) {
+            .footer-links>div {
+                margin-right: 0;
+                margin-bottom: 20px;
+                width: 100%;
+            }
+
+            .over-mij {
+                width: 100%;
+            }
+
+            .widgets {
+                justify-content: center;
+            }
         }
     </style>
 </head>
