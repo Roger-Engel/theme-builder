@@ -12,7 +12,7 @@
             min-height: 100vh;
             margin: 0;
             padding: 0;
-            font-family: "Bodoni MT", Didot, "Didot LT STD", "Book Antiqua", Garamond, "Times New Roman", serif;
+            font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
         }
 
         .navbar {
@@ -23,6 +23,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            border-bottom: 5px solid black;
         }
 
         .navbar ul {
@@ -80,12 +81,8 @@
         <a href="<?php echo esc_url(home_url('/')); ?>">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/droger.png" width="fit-content" height="50px">
         </a>
-        <ul>
-            <li><a href="<?php echo esc_url(home_url('/')); ?>">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+            <?php wp_nav_menu(array('theme_location' => 'primary', 'container' => 'nav', 'container_class' => 'site-navigation')); ?>
+
     </nav>
 </body>
 

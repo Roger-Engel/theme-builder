@@ -71,7 +71,7 @@ date_default_timezone_set( 'UTC' );
 wp_fix_server_vars();
 
 // Check if the site is in maintenance mode.
-wp_maintenance();
+wp_maintenance();	
 
 // Start loading timer.
 timer_start();

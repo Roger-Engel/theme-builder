@@ -15,6 +15,7 @@
             /* Aligns content horizontally in the center */
             align-items: center;
             color: #ffffff;
+            border-top: 5px solid black;
         }
 
         .footer-links {
