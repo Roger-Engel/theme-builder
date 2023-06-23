@@ -26,7 +26,7 @@ define('DB_NAME', 's169849_themebuilder');
 define('DB_USER', 's169849_themebuilder');
 
 /** Database password */
-define('DB_PASSWORD', 'Froakiex10');
+define('DB_PASSWORD', 'x');
 
 /** Database hostname */
 define( 'DB_HOST', 'localhost' );
